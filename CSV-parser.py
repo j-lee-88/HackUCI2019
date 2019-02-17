@@ -6,9 +6,6 @@ from collections import defaultdict
 class CsvFormatError(Exception):
     pass 
 
-
-
-
 class CsvOperations(object):
     def __init__(self, path_to_file):
         """tries to open csv file using various encodings"""
