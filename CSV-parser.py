@@ -4,7 +4,9 @@ from collections import defaultdict
 
 
 class CsvFormatError(Exception):
-    pass
+    pass 
+
+
 
 
 class CsvOperations(object):
