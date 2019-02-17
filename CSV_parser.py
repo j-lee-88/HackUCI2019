@@ -33,7 +33,7 @@ class CsvOperations(object):
             self.channels = set()
             self.important_rows = []
             for row in reader:
-                if row[0][0] != "":
+                if row[0][0] != "#":
                     if len(row[-1].split('-')) == 3:
                         try:
                             self.important_rows.append(row)
