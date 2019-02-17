@@ -1,44 +1,9 @@
 from first_trial import return_average
 
-
-
-
-    
-
-def getInput():
-    
-
-    print("Which type of student are you?")
-    print("1) Public Two-Year In-State Commuter")
-    print("2) Public Four-Year In-State On-Campus")
-    print("3) Public Four-Year Out-Of_State On-Campus")
-    print("4) Private Nonprofit Four-Year On-Campus")
-
-    option = int(input())
-    expenses = getExpenses()
-    
-    if option == 1:    
-        print_output(expenses, total_1)
-    elif option == 2:
-        print_output(expenses, total_2)
-    elif option == 3:
-        print_output(expenses, total_3)
-    elif option == 4:
-        print_output(expenses, total_4)
-
-def print_output(average, total):
-    if average < total:
-        print("You're paying less than the average!")
-    else:
-        print("You're paying more than the average!")
-        
-def getExpenses():
-    print("Please estimate how much your total expenses per year are:")
-
-    expenses = int(input())
-
-    return expenses
-
+total_1 = 17930
+total_2 = 25890
+total_3 = 41950
+total_4 = 52500
 
 avg_tuition_1 = 3660
 avg_tuition_2 = 10230
@@ -63,11 +28,40 @@ other_expenses_2 = 2120
 other_expenses_3 = 2120
 other_expenses_4 = 1700
 
-total_1 = 17930
-total_2 = 25890
-total_3 = 41950
-total_4 = 52500
 
-total_avg_costs = return_average()
+def getInput():
+    print("Which type of student are you?")
+    print("1) Public Two-Year In-State Commuter")
+    print("2) Public Four-Year In-State On-Campus")
+    print("3) Public Four-Year Out-Of-State On-Campus")
+    print("4) Private Nonprofit Four-Year On-Campus")
 
-getInput()
+    option = int(input())
+    expenses = getExpenses()
+
+    if option == 1:
+        print_output(expenses, total_1)
+    elif option == 2:
+        print_output(expenses, total_2)
+    elif option == 3:
+        print_output(expenses, total_3)
+    elif option == 4:
+        print_output(expenses, total_4)
+
+
+def print_output(average, total):
+    if average < total:
+        print("You're paying less than the average!")
+    else:
+        print("You're paying more than the average!")
+
+
+def getExpenses():
+    print("Please estimate how much your total expenses per year are:")
+    expenses = int(input())
+    return expenses
+
+
+if __name__ == "__main__":
+    getInput()
+    total_avg_costs = return_average()
