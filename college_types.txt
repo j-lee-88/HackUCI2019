@@ -1,0 +1,4 @@
+Public Two-Year In-State Commuter
+Public Four-Year In-State On-Campus
+Public Four-Year Out-Of_State On-Campus
+Private Nonprofit Four-Year On-Campus
